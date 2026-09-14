@@ -1,0 +1,78 @@
+{
+  "name": "hangly-win",
+  "productName": "Hangly-Win",
+  "version": "1.0.0",
+  "description": "Lightweight physics-based desktop charms for Windows",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/saranraj27102007/Hangly-Win.git"
+  },
+  "author": {
+    "name": "SARAN RAJ S",
+    "email": "saranrajstalin007@gmail.com"
+  },
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dev": "electron . --dev",
+    "build": "electron-builder --dir",
+    "dist": "electron-builder",
+    "dist:win": "electron-builder --win",
+    "postinstall": "electron-builder install-app-deps"
+  },
+  "dependencies": {
+    "matter-js": "^0.19.0"
+  },
+  "devDependencies": {
+    "electron": "^28.3.3",
+    "electron-builder": "^24.13.3"
+  },
+  "build": {
+    "appId": "com.hanglywin.app",
+    "productName": "Hangly-Win",
+    "copyright": "Copyright © 2024 Hangly-Win",
+    "icon": "assets/icons/icon.ico",
+    "directories": {
+      "output": "dist",
+      "buildResources": "build"
+    },
+    "files": [
+      "main.js",
+      "preload.js",
+      "src/**/*",
+      "assets/**/*",
+      "node_modules/matter-js/**/*"
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64"]
+        },
+        {
+          "target": "portable",
+          "arch": ["x64"]
+        }
+      ],
+      "icon": "assets/icons/icon.ico",
+      "requestedExecutionLevel": "asInvoker"
+    },
+    "nsis": {
+      "oneClick": false,
+      "perMachine": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Hangly-Win",
+      "installerIcon": "assets/icons/icon.ico",
+      "uninstallerIcon": "assets/icons/icon.ico",
+      "installerHeaderIcon": "assets/icons/icon.ico",
+      "deleteAppDataOnUninstall": false
+    },
+    "portable": {
+      "artifactName": "Hangly-Win-Portable.exe"
+    },
+    "artifactName": "${productName}-${version}-Setup.exe"
+  }
+}

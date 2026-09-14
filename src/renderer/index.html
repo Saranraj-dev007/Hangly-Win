@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:;">
+  <title>Hangly-Win Overlay</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Canvas for Matter.js physics rendering (strings) -->
+  <canvas id="physics-canvas"></canvas>
+
+  <!-- Charm DOM elements are injected here -->
+  <div id="charms-container"></div>
+
+  <!-- Right-click context menu -->
+  <div id="context-menu" class="context-menu hidden">
+    <div class="menu-section-label">Change Charm</div>
+    <div class="menu-item" data-action="change" data-type="nazar">🧿 Nazar</div>
+    <div class="menu-item" data-action="change" data-type="hamsa">🪬 Hamsa</div>
+    <div class="menu-item" data-action="change" data-type="nimbu-mirchi">🍋 Nimbu-Mirchi</div>
+    <div class="menu-item" data-action="change" data-type="temple-bell">🔔 Temple Bell</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item" data-action="duplicate">⧉ Duplicate</div>
+    <div class="menu-item menu-item-danger" data-action="remove">✕ Remove</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item" data-action="reset-position">↺ Reset Position</div>
+    <div class="menu-divider"></div>
+    <div class="menu-item" data-action="open-settings">⚙️ Settings</div>
+  </div>
+
+  <!-- Matter.js from local node_modules -->
+  <script src="../../node_modules/matter-js/build/matter.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

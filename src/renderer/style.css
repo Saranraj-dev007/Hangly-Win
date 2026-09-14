@@ -1,0 +1,131 @@
+/* ─── Reset & Base ─────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  width: 100%;
+  height: 100%;
+  background: transparent !important;
+  overflow: hidden;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* ─── Physics Canvas (strings) ─────────────────────────────────── */
+#physics-canvas {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* ─── Charms Container ──────────────────────────────────────────── */
+#charms-container {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ─── Individual Charm ──────────────────────────────────────────── */
+.charm {
+  position: absolute;
+  cursor: grab;
+  pointer-events: auto;
+  transform-origin: center top;
+  will-change: transform;
+  filter: drop-shadow(0 4px 12px rgba(0,0,0,0.35));
+  transition: filter 0.15s ease;
+}
+
+.charm:hover {
+  filter: drop-shadow(0 6px 18px rgba(0,0,0,0.5)) brightness(1.08);
+}
+
+.charm.dragging {
+  cursor: grabbing;
+  filter: drop-shadow(0 8px 24px rgba(0,0,0,0.6)) brightness(1.12);
+  z-index: 10;
+}
+
+.charm img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+  pointer-events: none;
+  -webkit-user-drag: none;
+}
+
+/* ─── Context Menu ──────────────────────────────────────────────── */
+.context-menu {
+  position: fixed;
+  z-index: 9999;
+  background: rgba(22, 24, 35, 0.97);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 10px;
+  padding: 6px 0;
+  min-width: 180px;
+  box-shadow:
+    0 8px 32px rgba(0,0,0,0.6),
+    0 2px 8px rgba(0,0,0,0.4),
+    inset 0 1px 0 rgba(255,255,255,0.08);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  font-family: 'Segoe UI', system-ui, sans-serif;
+  font-size: 13px;
+  color: #e8e8e8;
+  pointer-events: auto;
+  animation: menu-appear 0.12s cubic-bezier(0.16,1,0.3,1);
+  transform-origin: top left;
+}
+
+@keyframes menu-appear {
+  from { opacity: 0; transform: scale(0.92) translateY(-4px); }
+  to   { opacity: 1; transform: scale(1) translateY(0); }
+}
+
+.context-menu.hidden {
+  display: none;
+}
+
+.menu-section-label {
+  padding: 4px 14px 2px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: rgba(255,255,255,0.35);
+  font-weight: 600;
+}
+
+.menu-item {
+  padding: 7px 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: background 0.08s;
+  border-radius: 6px;
+  margin: 1px 4px;
+}
+
+.menu-item:hover {
+  background: rgba(255,255,255,0.1);
+  color: #fff;
+}
+
+.menu-item-danger {
+  color: #ff6b7a;
+}
+
+.menu-item-danger:hover {
+  background: rgba(255, 80, 80, 0.15);
+  color: #ff8a95;
+}
+
+.menu-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 4px 0;
+}
