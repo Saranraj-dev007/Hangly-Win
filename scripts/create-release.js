@@ -3,7 +3,7 @@ const path = require('path');
 const https = require('https');
 
 const TOKEN = process.env.GITHUB_TOKEN || process.env.GH_TOKEN;
-const REPO = 'saranraj27102007/Hangly-Win';
+const REPO = 'Saranraj-dev007/Hangly-Win';
 const TAG = 'v1.0.0';
 
 function apiRequest(options, body = null) {
@@ -77,8 +77,8 @@ async function main() {
       'Traditional charms swing, sway, and interact at the top of your screen.',
       '',
       '## 📥 Downloads',
-      '- **Installer (Recommended)**: [Hangly-Win-1.0.0-Setup.exe](https://github.com/saranraj27102007/Hangly-Win/releases/download/v1.0.0/Hangly-Win-1.0.0-Setup.exe)',
-      '- **Standalone Portable**: [Hangly-Win-Portable.exe](https://github.com/saranraj27102007/Hangly-Win/releases/download/v1.0.0/Hangly-Win-Portable.exe)',
+      '- **Installer (Recommended)**: [Hangly-Win-1.0.0-Setup.exe](https://github.com/Saranraj-dev007/Hangly-Win/releases/download/v1.0.0/Hangly-Win-1.0.0-Setup.exe)',
+      '- **Standalone Portable**: [Hangly-Win-Portable.exe](https://github.com/Saranraj-dev007/Hangly-Win/releases/download/v1.0.0/Hangly-Win-Portable.exe)',
       '',
       '## ✨ Included Charms',
       '- 🧿 **Nazar Boncuğu** (Turkish Evil Eye)',

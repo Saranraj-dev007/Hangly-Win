@@ -7,8 +7,8 @@
 *Traditional protective symbols that hang from the top of your screen — powered by real 2D physics.*
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4)](https://github.com/saranraj27102007/Hangly-Win/releases)
-[![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)](https://github.com/saranraj27102007/Hangly-Win/releases/latest)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0078D4)](https://github.com/Saranraj-dev007/Hangly-Win/releases)
+[![Version](https://img.shields.io/badge/Version-1.0.0-brightgreen)](https://github.com/Saranraj-dev007/Hangly-Win/releases/latest)
 
 </div>
 
@@ -36,7 +36,7 @@
 
 > **For normal users — no developer tools required!**
 
-1. Go to the **[Latest Release](https://github.com/saranraj27102007/Hangly-Win/releases/latest)**
+1. Go to the **[Latest Release](https://github.com/Saranraj-dev007/Hangly-Win/releases/latest)**
 2. Download **`Hangly-Win-1.0.0-Setup.exe`**
 3. Run the installer
 4. Launch Hangly-Win from your Start Menu or desktop shortcut
@@ -47,7 +47,7 @@
 
 ## 🚀 Installation
 
-1. Download `Hangly-Win-1.0.0-Setup.exe` from [Releases](https://github.com/saranraj27102007/Hangly-Win/releases)
+1. Download `Hangly-Win-1.0.0-Setup.exe` from [Releases](https://github.com/Saranraj-dev007/Hangly-Win/releases)
 2. Double-click the installer
 3. Follow the setup wizard
 4. Hangly-Win will appear in your Start Menu
@@ -77,7 +77,7 @@ Prerequisites: [Node.js](https://nodejs.org/) (v18 or later)
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/saranraj27102007/Hangly-Win.git
+git clone https://github.com/Saranraj-dev007/Hangly-Win.git
 cd Hangly-Win
 
 # 2. Install dependencies
